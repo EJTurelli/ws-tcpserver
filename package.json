@@ -1,0 +1,15 @@
+{
+    "name": "ws-tcpserver",
+    "version": "0.0.1",
+    "description": "",
+    "main": "./client/client.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.3",
+        "net": "^1.0.2"
+    }
+}
