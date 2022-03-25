@@ -77,15 +77,15 @@ Este módulo está esperando un request de la siguiente manera:
 ```
 http://localhost:3000/req_id
 ```
-Donde ```req_id``` identifica cada requerimiento que se haga al server, esto es sólo a los fines de verificar el buen funcionamento del sistema.
+Donde ```req_id``` identifica cada requerimiento que se haga al server, esto es sólo a los fines de verificar el buen funcionamiento del sistema.
 
-El mensaje que se envía al server se genera automáticamnte y tiene el siguiente formato:
+El mensaje que se envía al server se genera automáticamente y tiene el siguiente formato:
 ```
 Client.req_[req_id] -> [Date.now()] -> Server
 
 Ej: Client.req_1 -> 1648156370470 -> Server
 ```
-De esta manera podemos ver que los mensajes varían y podremos identificar si las respuestas corresponden con los requerimentos.
+De esta manera podemos ver que los mensajes varían y podremos identificar si las respuestas corresponden con los requerimientos.
 
 El server de prueba recibe el mensaje enviado, lo modifica, demora un momento y lo devuelve:
 ```
@@ -106,7 +106,7 @@ Ej: {"error":"Error: connect ECONNREFUSED 127.0.0.1:2222"}
 ```
 
 ### Archivo ./server/server.js
-El módulo ```./server/server.js```, es el servidor TCP de test que se encuentra escuchando llamadas de clientes, y cuando uno de ellos le envía un mensaje, lo modifica y lo retorna.
+El módulo ```./server/server.js```, es el servidor TCP de test que se encuentra escuchando llamadas de clientes, y cuando uno de ellos le envía un mensaje, lo modifica y lo retorna. Este server está basado integramente en https://gist.github.com/sid24rane/2b10b8f4b2f814bd0851d861d3515a10
 
 ### Archivo test.bat
 La función de este batch es llamar al web service para poder probar el sistema (utilizamos **curl**), se debe ejecutar de la siguiente manera:
@@ -115,7 +115,7 @@ La función de este batch es llamar al web service para poder probar el sistema 
 
 Ej: test.bat 1234
 ```
-Donde ```req_id``` identifica al requerimiento. La salida de la ejecución de **curl** se econtrará en la carpeta ```out``` en un archivo con extensión 'txt' cuyo nombre es el mismo ```req_id```.
+Donde ```req_id``` identifica al requerimiento. La salida de la ejecución de **curl** se encontrará en la carpeta ```out``` en un archivo con extensión 'txt' cuyo nombre es el mismo ```req_id```.
 
 ### Archivo test_concurrency.bat
 La función de este batch es llamar a test.bat diez veces en paralelo con ```req_id``` diferentes, con el fin de probar el funcionamiento del sistema con llamadas concurrentes.
