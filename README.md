@@ -108,7 +108,7 @@ Ej: {"error":"Error: connect ECONNREFUSED 127.0.0.1:2222"}
 ### Archivo ./server/server.js
 El módulo ```./server/server.js```, es el servidor TCP de test que se encuentra escuchando llamadas de clientes, y cuando uno de ellos le envía un mensaje, lo modifica y lo retorna. Este server está basado integramente en https://gist.github.com/sid24rane/2b10b8f4b2f814bd0851d861d3515a10
 
-### Archivo test.bat
+### Archivo test.bat [en linux test.sh]
 La función de este batch es llamar al web service para poder probar el sistema (utilizamos **curl**), se debe ejecutar de la siguiente manera:
 ```
 # test.bat req_id
@@ -117,8 +117,8 @@ Ej: test.bat 1234
 ```
 Donde ```req_id``` identifica al requerimiento. La salida de la ejecución de **curl** se encontrará en la carpeta ```out``` en un archivo con extensión 'txt' cuyo nombre es el mismo ```req_id```.
 
-### Archivo test_concurrency.bat
-La función de este batch es llamar a test.bat diez veces en paralelo con ```req_id``` diferentes, con el fin de probar el funcionamiento del sistema con llamadas concurrentes.
+### Archivo test_concurrency.bat [en linux test_concurrency.sh]
+La función de este batch es llamar a test.bat [test.sh] diez veces en paralelo con ```req_id``` diferentes, con el fin de probar el funcionamiento del sistema con llamadas concurrentes.
 
 
 
